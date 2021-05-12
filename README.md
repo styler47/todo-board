@@ -3,7 +3,7 @@
 Aim is to create simple todo list/board in angular to practise frontend development. App is designed to be single user only. Data is stored locally using local storage. App uses Angular cdk package and Antd framework for angular. 
 
 ## Gif
-![App introduction gif](https://github.com/styler47/todo-board/tree/main/src/assets/introduction.gif)
+![App introduction gif](https://github.com/styler47/todo-board/blob/f5d1426e8084da7dbac2225266f54062b238a21c/src/assets/introduction.gif)
 
 ## Components
 ### TodoBoardComponent
