@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  margin-bottom: 6px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.task {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

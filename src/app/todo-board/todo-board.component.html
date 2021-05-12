@@ -1,0 +1,16 @@
+<nz-layout class="layout">
+  <nz-sider>
+    <div class="logo">Todo Board</div>
+    <app-board-list
+      [activeBoard]="activeBoard"
+      [boards]="boards"
+      (selectBoard)="selectBoard($event)"
+      (refreshBoards)="refreshBoards()">
+    </app-board-list>
+  </nz-sider>
+  <nz-layout class="right-layout">
+    <nz-content>
+      <app-board-detail [selectedBoard]="activeBoard" (boardAction)="boardAction($event)"></app-board-detail>
+    </nz-content>
+  </nz-layout>
+</nz-layout>

@@ -1,0 +1,20 @@
+<ng-container *ngIf="tasks$ | async as tasks">
+  <div
+    class="dynamic-tasks"
+    cdkDropList
+    [cdkDropListData]="tasks"
+    (cdkDropListDropped)="drop($event)">
+    <app-task cdkDrag *ngFor="let task of tasks" [task]="task">
+      <div class="custom-placeholder" *cdkDragPlaceholder></div>
+    </app-task>
+  </div>
+</ng-container>
+
+<button
+  (click)="addNewTask()"
+  class="add-new-task"
+  nz-button
+  nzType="dashed"
+  nzBlock>
+  <i nz-icon nzType="file-add"></i>Add new task
+</button>

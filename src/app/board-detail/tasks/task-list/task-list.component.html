@@ -1,0 +1,13 @@
+  <nz-table #headerTable [nzData]="tasks">
+    <thead>
+      <th>Name</th>
+      <th>State</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of headerTable.data">
+      <td>{{data.name}}</td>
+      <td>{{stateName(data.stateId)}}</td>
+    </tr>
+    </tbody>
+  </nz-table>
+

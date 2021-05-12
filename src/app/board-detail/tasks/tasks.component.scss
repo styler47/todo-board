@@ -1,0 +1,31 @@
+.add-new-task {
+  border-color: #b9b9b9;
+  background: none;
+}
+
+.dynamic-tasks {
+  margin-bottom: 6px;
+  min-height: 10px;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cdk-drop-list-dragging :not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.custom-placeholder {
+  background: #ccc;
+  border: dotted 3px #999;
+  height: 32px;
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  margin-bottom: 6px;
+}

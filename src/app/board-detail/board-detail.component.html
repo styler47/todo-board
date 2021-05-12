@@ -1,0 +1,27 @@
+<ng-container *ngIf="selectedBoard; else noBoard">
+  <nz-page-header>
+    <nz-page-header-title>{{selectedBoard.name}}</nz-page-header-title>
+    <nz-page-header-extra>
+      <button (click)="editBoard()" nz-button>
+        <i nz-icon nzType="edit"></i>
+        Edit board
+      </button>
+    </nz-page-header-extra>
+  </nz-page-header>
+  <nz-tabset>
+    <nz-tab nzTitle="Board">
+      <app-states [board]="selectedBoard"></app-states>
+    </nz-tab>
+    <nz-tab nzTitle="Task list">
+      <app-task-list [board]="selectedBoard"></app-task-list>
+    </nz-tab>
+  </nz-tabset>
+</ng-container>
+
+<ng-template #noBoard>
+  <app-non-ideal-state
+    heading="Board not found"
+    description="Please add new board to continue"
+    icon="home"
+  ></app-non-ideal-state>
+</ng-template>

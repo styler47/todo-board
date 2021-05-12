@@ -1,0 +1,18 @@
+<ul nz-menu nzTheme="dark" nzMode="inline">
+  <li nz-menu-item
+      *ngFor="let board of boards"
+      [nzSelected]="board.id == activeBoard.id"
+      [routerLink]=""
+      (click)="selectBoard.emit(board)">
+    <i nz-icon nzType="file"></i>
+    <span>{{board.name}}</span>
+  </li>
+</ul>
+
+<button
+  (click)="addNew()"
+  class="add-new-board"
+  nz-button
+  nzType="text">
+  <i nz-icon nzType="file-add"></i>Add new board
+</button>

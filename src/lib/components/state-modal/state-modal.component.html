@@ -1,0 +1,17 @@
+<form nz-form [formGroup]="form">
+  <nz-form-item>
+    <nz-form-label nzSpan="6">Name</nz-form-label>
+    <nz-form-control>
+      <input nz-input formControlName="name" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item nzJustify="end">
+    <nz-space>
+      <button *nzSpaceItem nz-button nzType="default" (click)="cancel()">Cancel</button>
+      <ng-container *ngIf="isEdit()">
+        <button *nzSpaceItem nz-button nzDanger (click)="remove()">Remove</button>
+      </ng-container>
+      <button *nzSpaceItem nz-button nzType="primary" [disabled]="!form.valid" (click)="submit()">Submit</button>
+    </nz-space>
+  </nz-form-item>
+</form>

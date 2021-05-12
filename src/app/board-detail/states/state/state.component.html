@@ -1,0 +1,7 @@
+<nz-card class="state-card" [nzTitle]="state.name" [nzExtra]="extraTemplate">
+  <app-tasks [state]="state"></app-tasks>
+</nz-card>
+
+<ng-template #extraTemplate>
+  <button (click)="editState()" nz-button nzType="default"><i nz-icon nzType="edit"></i></button>
+</ng-template>

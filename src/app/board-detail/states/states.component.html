@@ -1,0 +1,24 @@
+<div class="states-container">
+  <ng-container *ngIf="states$ | async as states">
+    <div
+      class="dynamic-states"
+      cdkDropList
+      cdkDropListGroup
+      cdkDropListOrientation="horizontal"
+      [cdkDropListData]="states"
+      (cdkDropListDropped)="drop($event)">
+      <app-state cdkDrag *ngFor="let state of states" [state]="state">
+        <div class="custom-placeholder" *cdkDragPlaceholder></div>
+      </app-state>
+    </div>
+  </ng-container>
+
+  <button
+    (click)="addNewState()"
+    class="add-new-state"
+    nz-button
+    nzBlock
+    nzType="dashed">
+    <i nz-icon nzType="file-add" nzTheme="outline"></i>Add new state
+  </button>
+</div>
