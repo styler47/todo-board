@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LocalStorageService } from '../lib/services/local-storage.service';
 import { TodoBoardModule } from './todo-board/todo-board.module';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
@@ -11,6 +10,8 @@ import en from '@angular/common/locales/en';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NzDrawerService } from 'ng-zorro-antd/drawer';
+import { NzModalService } from 'ng-zorro-antd/modal';
 
 registerLocaleData(en);
 
@@ -26,7 +27,10 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
   ],
-  providers: [LocalStorageService, { provide: NZ_I18N, useValue: en_US }],
+  providers: [
+    NzDrawerService,
+    NzModalService,
+    { provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

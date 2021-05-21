@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { LocalStorageService } from './local-storage.service';
 import { BoardInterface } from '../interfaces/board.interface';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class BoardService {
   constructor(private localStorage: LocalStorageService) {}
 

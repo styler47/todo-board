@@ -3,7 +3,9 @@ import { LocalStorageService } from './local-storage.service';
 import { StateInterface } from '../interfaces/state.interface';
 import { TaskInterface } from '../interfaces/task.interface';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class StateService {
   constructor(private localStorage: LocalStorageService) { }
 

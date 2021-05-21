@@ -4,7 +4,6 @@ import { TodoBoardComponent } from './todo-board.component';
 import { BoardListComponent } from './board-list/board-list.component';
 import { BoardDetailModule } from '../board-detail/board-detail.module';
 import { RouterModule } from '@angular/router';
-import { BoardService } from '../../lib/services/board.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
@@ -28,8 +27,6 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
     BoardModalModule,
     NzButtonModule
   ],
-  providers: [
-    BoardService
-  ]
+  providers: []
 })
 export class TodoBoardModule { }

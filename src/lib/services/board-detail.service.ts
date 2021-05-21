@@ -5,7 +5,9 @@ import { StateInterface } from '../interfaces/state.interface';
 import { StateService } from './state.service';
 import { TaskService } from './task.service';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class BoardDetailService {
   private readonly statesSubject: BehaviorSubject<StateInterface[]> = new BehaviorSubject<StateInterface[]>([]);
   private readonly tasksSubject: BehaviorSubject<TaskInterface[]> = new BehaviorSubject<TaskInterface[]>([]);

@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { TaskInterface } from '../interfaces/task.interface';
 import { LocalStorageService } from './local-storage.service';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class TaskService {
   constructor(private localStorage: LocalStorageService) { }
 
