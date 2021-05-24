@@ -15,7 +15,7 @@ export class BoardDetailComponent implements OnChanges {
   @Input() selectedBoard: BoardInterface;
   @Output() boardAction: EventEmitter<DrawerInterface<BoardInterface>> = new EventEmitter<DrawerInterface<BoardInterface>>();
 
-  constructor(public boardDetailService: BoardDetailService,
+  constructor(private boardDetailService: BoardDetailService,
               private drawerService: NzDrawerService) {}
 
   ngOnChanges(changes: SimpleChanges): void {
